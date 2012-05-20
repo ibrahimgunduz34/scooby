@@ -1,2 +1,2 @@
-Scooby is vrry powerful payment provider controller tool.
+Scooby is very powerful payment provider controller tool.
 -- Coming soon --
