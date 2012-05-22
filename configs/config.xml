@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <storage>
+    <adapter>MySqlAdapter</adapter>
+  </storage>
+  <AdapterConfig>
+    <MySqlAdapter>
+      <host>127.0.0.1</host>
+      <username>root</username>
+      <password>p541mtu</password>
+      <database>scooby</database>
+    </MySqlAdapter>
+    <MemcacheAdapter>
+      <host>127.0.0.1</host>
+    </MemcacheAdapter>
+  </AdapterConfig>
+  <parameters>
+    <period>10</period>
+    <ErrorLevel>0.4</ErrorLevel>
+  </parameters>
+  <providers>
+    <GarantiBank>
+      <name>Garanti Bankası</name>
+      <host>https://sanalposprov.garanti.com.tr/VPServlet</host>
+      <TestMethods>
+        <method>Scooby_Tester_Connection</method>
+      </TestMethods>
+      <events>
+        <OnError></OnError>
+        <OnSuccess></OnSuccess>
+      </events>
+    </GarantiBank>
+  </providers>
+</config>
