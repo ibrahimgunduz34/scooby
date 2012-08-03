@@ -1,33 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-9"?>
 <config>
-  <storage>
-    <adapter>Memcache</adapter>
-    <config>
-      <host>127.0.0.1</host>
-    </config>
-  </storage>
-  <providers>
-    <Garanti>
-      <config>
-        <url>https://sanalposprov.garanti.com.tr/<url>
-        <merchant_id>111995</merchant_id>
-        <terminal_id>66912</terminal_id>
-        <prov_user>PROVAUTH</prov_user>
-        <prov_pass>test</prov_pass>
-      </config>
-      <parameters>
-        <testPeriod>10</testPeriod>
-        <criticalLevel>0.4</criticalLevel>
-      </parameters>
-      <methods>
-        <method>Garanti_ConnectionTest</method>
-      </methods>
-      <event>
-        <onStable />
-        <onCriticalLevel />
-        <onError />
-        <onSuccess />
-      </event>
-    </Garanti>
-  </providers>
+    <period>10</period>
+    <providers>
+        <GarantiBankasi>
+            <name>Garanti Bankasi</name>
+            <parameters>
+                <criticalLevel>0.47</criticalLevel>
+                <credentials>
+                    <url>https://sanalposprovtest.garanti.com.tr/VPServlet</url>
+                    <username>rocketInternet</username>
+                    <password>rocket123</password>
+                    <clientId>123456</clientId>
+                    <terminalId>123456</terminalId>
+                </credentials>
+            </parameters>
+            <testers>
+                <tester>Garanti_ConnectionTest</tester>
+            </testers>
+            <events>
+                <error>Error<error>
+                <success>Success</success>
+                <criticalLevel>CriticalLevel</criticalLevel>
+                <stable>Stable</stable>
+            </events>
+        </GarantiBankasi>
+    </providers>
 </config>

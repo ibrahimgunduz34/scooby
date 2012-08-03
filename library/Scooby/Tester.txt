@@ -1,0 +1,6 @@
+- tester configurasyondaki her bir provider icin yeni bir provider objesi uretir
+- provider configurasyonundaki testerler provider objesine attach edilir.
+- tester provider a test oturumunu baslatmasini soyler
+- provider test periodu kadar attach olan testleri cagirir.
+- tester siniflari calisirken her bir testerin basarili veya basarisiz olma ihtimaline gore hata veya basari eventleri tetiklenir
+- donen basiarili/basarisiz sonuclarin oranindan bir puan uretilir, puan kritik seviyenin uzerindeyse CriticalLevel, degilse Stable event i tetiklenir.

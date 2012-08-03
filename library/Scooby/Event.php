@@ -1,7 +1,5 @@
 <?php
-class Scooby_Event extends Scooby_ObjectAbstract
+class Scooby_Event
 {
-  protected $_attributes = array(
-        '' => null
-      );
+
 }

@@ -120,4 +120,3 @@ abstract class Scooby_ObjectAbstract
     $this->setCreatedAt( time() );
   }
 }
-?>
