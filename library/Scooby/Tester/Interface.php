@@ -2,9 +2,14 @@
 interface Scooby_Tester_Interface
 {
     /**
-     * executes test process.
-     * @param Scooby_Tester_Request $request
-     * @return Scooby_Tester_Response
+     * @param Zend_Config $providerConfig
+     * @return Scooby_Tester_Result
      */
-    public function _invoke(Scooby_Tester_Request $request)
+    public function invoke(Zend_Config $providerConfig);
+
+    /**
+     * returns test result
+     * @return Scooby_Tester_Result
+     */
+    public function getResult();
 }

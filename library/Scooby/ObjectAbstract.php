@@ -114,9 +114,4 @@ abstract class Scooby_ObjectAbstract
         break;
     }
   }
-  
-  public function __construct()
-  {
-    $this->setCreatedAt( time() );
-  }
 }

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-9"?>
 <config>
-    <period>10</period>
     <providers>
         <GarantiBankasi>
             <name>Garanti Bankasi</name>
             <parameters>
+                <period>10</period>
+                <delay>1000</delay>
                 <criticalLevel>0.47</criticalLevel>
                 <credentials>
                     <url>https://sanalposprovtest.garanti.com.tr/VPServlet</url>
@@ -15,13 +16,12 @@
                 </credentials>
             </parameters>
             <testers>
+                <tester>Garanti_ApplicationTest</tester>
                 <tester>Garanti_ConnectionTest</tester>
             </testers>
             <events>
-                <error>Error<error>
-                <success>Success</success>
-                <criticalLevel>CriticalLevel</criticalLevel>
-                <stable>Stable</stable>
+                <criticalLevel>Garanti_CriticalLevel</criticalLevel>
+                <stable>Garanti_Stable</stable>
             </events>
         </GarantiBankasi>
     </providers>
